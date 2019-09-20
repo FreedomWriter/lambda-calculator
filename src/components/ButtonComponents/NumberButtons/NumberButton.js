@@ -5,7 +5,9 @@ const NumberButton = (props) => {
   // console.log(props);
 
   if (props) 
- { return (
+ {  if (props.number === "0") {
+  return <button  className="zero number-buttons buttons">{props.number}</button>
+} else {return (
     <>
       {/* Display a button element rendering the data being passed down from the parent container on props */}
       
@@ -15,7 +17,7 @@ const NumberButton = (props) => {
       }
       
     </>
-  );
+  );}
 };
 }
 export default NumberButton;

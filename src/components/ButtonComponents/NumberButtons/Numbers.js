@@ -20,12 +20,18 @@ const Numbers = () => {
        
        {
          numbers.map((num, index) => {
-           return <NumberButton key={index} number={num} state={useState} />
+          
+            return <NumberButton key={index} number={num} state={useState} />
+          
+           
          })
        }
+
+       
        
     </div>
   );
+
 };
 
 export default Numbers;
