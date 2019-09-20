@@ -5,7 +5,7 @@
 // and how you'll access the data.
 
 export const numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "."];
-console.log(numbers);
+
 export const operators = [
   {
     char: "/",
@@ -30,3 +30,5 @@ export const operators = [
 ];
 
 export const specials = ["C", "+/-", "%"];
+
+export default {numbers, operators, specials}
