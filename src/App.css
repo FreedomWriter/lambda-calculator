@@ -33,11 +33,7 @@
     justify-items: center;
     align-items: center;
 }
-.display {
-    /* border: solid white 1px; */
-    justify-content: center;
-    
-}
+
 .buttons {
     border: none;
     color: white;
