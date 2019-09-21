@@ -25,21 +25,25 @@ function App() {
   const [dispNum, setDispNum] = useState('');
   const [total, setTotal] = useState('');
 
-  
+  function handleClick(e) {
+    const value=e.target.value;
+    setDispNum(value);
+  }
   
   return (
+    
     <div className="container">
       <Logo />
       <div className="App">
         {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
-        <Display />
+        <Display dispNum={dispNum}/>
         <div className="button-container">
           <div className="row-buttons">
-            <Specials />
-            <Numbers />
+            <Specials handleClick={handleClick}/>
+            <Numbers handleClick={handleClick}/>
           </div>
           <div className="column-buttons">
-            <Operators />
+            <Operators handleClick={handleClick}/>
           </div>
         </div>
         
