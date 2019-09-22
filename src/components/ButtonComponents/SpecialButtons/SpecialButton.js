@@ -1,6 +1,6 @@
 import React from "react";
-import Specials from "./Specials";
-import Display from "../../DisplayComponents/Display"
+// import Specials from "./Specials";
+// import Display from "../../DisplayComponents/Display"
 
 const SpecialButton = (props) => {
   // console.log(props);

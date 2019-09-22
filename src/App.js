@@ -4,7 +4,7 @@ import Numbers from "./components/ButtonComponents/NumberButtons/Numbers";
 import Operators from "./components/ButtonComponents/OperatorButtons/Operators";
 import Specials from "./components/ButtonComponents/SpecialButtons/Specials";
 import Display from "./components/DisplayComponents/Display";
-import {numbers,specials,operators} from './data';
+// import {numbers,specials,operators} from './data';
 // STEP 4 - import the button and display components
 // Don't forget to import any extra css/scss files you build into the correct component
 
@@ -24,12 +24,28 @@ function App() {
 
   const [dispNum, setDispNum] = useState('');
   const [total, setTotal] = useState('');
+  
+  function handleNumClick(e) {
+    let value=e.target.value;
+    let firstNum = setDispNum(dispNum + value);
+    // return firstNum;
+    
+  }
 
+//   function handleClick(e) {
+  //   if (firstNum) {
+  //     let value=e.target.value;
+  //     let secondNum = setDispNum(dispNum + value);
+  //     return secondNum;
+  // }
+// }
   function handleClick(e) {
-    const value=e.target.value;
+    let value=e.target.value;
     setDispNum(value);
   }
-  
+  // function math() {
+
+  // }
   return (
     
     <div className="container">
@@ -40,7 +56,7 @@ function App() {
         <div className="button-container">
           <div className="row-buttons">
             <Specials handleClick={handleClick}/>
-            <Numbers handleClick={handleClick}/>
+            <Numbers handleClick={handleNumClick}/>
           </div>
           <div className="column-buttons">
             <Operators handleClick={handleClick}/>

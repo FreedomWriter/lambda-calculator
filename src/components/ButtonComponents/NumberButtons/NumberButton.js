@@ -9,7 +9,7 @@ const NumberButton = (props) => {
       {/* Display a button element rendering the data being passed down from the parent container on props */}
 
       {
-        <button className="number-buttons buttons" value ={props.number} onClick={props.handleClick}>{props.number}</button>
+        <button className="number-buttons buttons" value ={props.number} onClick={props.handleNumClick}>{props.number}</button>
       }
       
     </>
