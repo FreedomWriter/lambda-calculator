@@ -17,7 +17,7 @@ const Operators = (props) => {
       { 
         operators.map((operator, index) => {
           
-            return <OperatorButton key={index} char={operator.char} value={operator.value} handleClick={props.handleClick}/>
+            return <OperatorButton key={index} char={operator.char} value={operator.value} handleClick={props.handleClick} handleEqual={props.handleEqual}/>
           
           
         })

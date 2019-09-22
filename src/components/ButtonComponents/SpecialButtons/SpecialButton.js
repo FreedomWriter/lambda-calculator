@@ -5,7 +5,7 @@ import React from "react";
 const SpecialButton = (props) => {
   // console.log(props);
   if (props.special === "C") {
-    return (<button className="special-buttons buttons" onClick={props.handleClick}>{props.special}</button>);
+    return (<button className="clear special-buttons buttons" value={props.special} onClick={props.handleClear}>{props.special}</button>);
   } else 
   {return (
     <>

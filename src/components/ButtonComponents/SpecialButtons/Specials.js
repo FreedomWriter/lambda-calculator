@@ -18,7 +18,7 @@ const Specials = (props) => {
        {
          specials.map((special, index) => {
           //  console.log(index);
-           return <SpecialButton key={index} special = {special} value={special.value} handleClick={props.handleClick}/>
+           return <SpecialButton key={index} special = {special} value={special.value} handleClick={props.handleClick} handleClear={props.handleClear}/>
          })
         
        }

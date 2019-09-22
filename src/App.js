@@ -40,12 +40,19 @@ function App() {
   // }
 // }
   function handleClick(e) {
-    let value=e.target.value;
-    setDispNum(value);
+    let value2=e.target.value;
+    setDispNum(dispNum + value2);
+    
   }
-  // function math() {
-
-  // }
+  function handleEqual(e) {
+    console.log('You clicked equal');
+    setDispNum(eval(dispNum));
+    // setDispNum(eval(dispNum));
+  }
+  function handleClear(e) {
+    console.log('you have clicked clear');
+    setDispNum("");
+  }
   return (
     
     <div className="container">
@@ -55,11 +62,11 @@ function App() {
         <Display dispNum={dispNum}/>
         <div className="button-container">
           <div className="row-buttons">
-            <Specials handleClick={handleClick}/>
+            <Specials handleClick={handleClick} handleClear={handleClear}/>
             <Numbers handleClick={handleNumClick}/>
           </div>
           <div className="column-buttons">
-            <Operators handleClick={handleClick}/>
+            <Operators handleClick={handleClick} handleEqual={handleEqual}/>
           </div>
         </div>
         
