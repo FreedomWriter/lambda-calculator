@@ -25,8 +25,13 @@ const Numbers = (props) => {
           return <NumberButton key={index} number={parseInt(num)} handleNumClick={props.handleClick} state={useState} />
          })
        }
-       {/* {
+       
+       {//Below works, with eval
+         /* {
          numbers.map((num, index) => {
+          if (num === ".") {
+            return <NumberButton key={index} number={num} handleNumClick={props.handleClick} state={useState} />
+         } else 
           return <NumberButton key={index} number={parseInt(num)} handleNumClick={props.handleClick} state={useState} />
          })
        } */}

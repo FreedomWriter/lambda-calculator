@@ -1,5 +1,5 @@
-import React from "react";
-// import React, {useState} from "react";
+// import React from "react";
+import React, {useState} from "react";
 import SpecialButton from "./SpecialButton";
 import {specials} from "../../../data";
 // console.log(specials);
@@ -9,7 +9,7 @@ import {specials} from "../../../data";
 
 const Specials = (props) => {
   // STEP 2 - add the imported data to state
-  // const [spec, setSpec] = useState('');
+  const [spec, setSpec] = useState('');
   return (
     <div className="spec-container">
       {/* STEP 3 - Use .map() to iterate over your array data and return a button
@@ -17,10 +17,8 @@ const Specials = (props) => {
        it any props needed by the child component*/}
        {
          specials.map((special, index) => {
-          //  console.log(special);
-           return <SpecialButton key={index} special = {special} value={special.value} negative={props.negative} handleClick={props.handleClick} handleClear={props.handleClear} percent={props.percent}/>
+          return <SpecialButton key={index} special = {special} value={special.value} negative={props.negative} handleClick={props.handleClick} handleClear={props.handleClear} percent={props.percent}/>
          })
-        
        }
     </div>
   );

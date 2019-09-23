@@ -3,7 +3,6 @@ import React from "react";
 // import Display from "../../DisplayComponents/Display"
 
 const SpecialButton = (props) => {
-  // console.log(props);
   if (props.special === "+/-") {
     return (<button className="negative special-buttons buttons" value={`* ${-1}`} onClick={props.negative}>{props.special}</button>);
   } else
@@ -20,8 +19,11 @@ const SpecialButton = (props) => {
     </>
   );}
   //Below works but I'm trying to get rid of eval
+  // if (props.special === "+/-") {
+  //   return (<button className="negative special-buttons buttons" value={`* ${-1}`} onClick={props.negative}>{props.special}</button>);
+  // } else
   // if (props.special === "%") {
-  //   return (<button className="clear special-buttons buttons" value={`* .01`} onClick={props.percent}>{props.special}</button>);
+  //   return (<button className="percent special-buttons buttons" value={`* .01`} onClick={props.percent}>{props.special}</button>);
   // } else 
   // if (props.special === "C") {
   //   return (<button className="clear special-buttons buttons" value={props.special} onClick={props.handleClear}>{props.special}</button>);

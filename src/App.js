@@ -28,10 +28,6 @@ function App() {
   function handleNumClick(e) {
     let value=e.target.value;
     setDispNum(`${dispNum}${value}`);
-    console.log(typeof dispNum);
-    // console.log(typeof value)
-
-    
   }
 
   function handleClick(e) {
@@ -40,9 +36,7 @@ function App() {
   }
 
   function handleEqual(e) {
-    let valueOp = e.target.value;
     setDispNum(eval(dispNum));
-    console.log();
 
   }
 
@@ -53,7 +47,6 @@ function App() {
   function percent(e) {
     let value=e.target.value;
     setDispNum(`${eval(dispNum + value)}`);
-    // setDispNum(Number.parseFloat)
   }
 
   function negative(e) {
@@ -66,7 +59,11 @@ function App() {
   //This works, but is vulnerable
   // function handleNumClick(e) {
   //   let value=e.target.value;
-  //   setDispNum(dispNum + value);
+  //   setDispNum(`${dispNum}${value}`);
+  //   console.log(typeof dispNum);
+  //   // console.log(typeof value)
+
+    
   // }
 
   // function handleClick(e) {
@@ -75,7 +72,10 @@ function App() {
   // }
 
   // function handleEqual(e) {
+  //   let valueOp = e.target.value;
   //   setDispNum(eval(dispNum));
+  //   console.log();
+
   // }
 
   // function handleClear() {
@@ -85,6 +85,13 @@ function App() {
   // function percent(e) {
   //   let value=e.target.value;
   //   setDispNum(`${eval(dispNum + value)}`);
+  //   // setDispNum(Number.parseFloat)
+  // }
+
+  // function negative(e) {
+  //   let value=e.target.value;
+  //   let neg = `${eval(dispNum + value)}`;
+  //   setDispNum(neg);
   // }
 
   return (
