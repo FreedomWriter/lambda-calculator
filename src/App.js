@@ -22,17 +22,21 @@ function App() {
   // Don't forget to pass the functions (and any additional data needed) to the components as props
   
 
-  const [dispNum, setDispNum] = useState('');
+  const [dispNum, setDispNum] = useState('0');
   
   
   function handleNumClick(e) {
     let value=e.target.value;
+    if (dispNum === '0') {
+      setDispNum(value);
+    } else 
     setDispNum(`${dispNum}${value}`);
+    
   }
 
   function handleClick(e) {
-    let value2=e.target.value;
-    setDispNum(dispNum + value2);
+    let value=e.target.value;
+    setDispNum(dispNum + value);
   }
 
   function handleEqual(e) {
@@ -41,7 +45,7 @@ function App() {
   }
 
   function handleClear() {
-    setDispNum("");
+    setDispNum("0");
   }
 
   function percent(e) {
