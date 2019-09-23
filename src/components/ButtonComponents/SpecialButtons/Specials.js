@@ -17,8 +17,8 @@ const Specials = (props) => {
        it any props needed by the child component*/}
        {
          specials.map((special, index) => {
-          //  console.log(index);
-           return <SpecialButton key={index} special = {special} value={special.value} handleClick={props.handleClick} handleClear={props.handleClear}/>
+          //  console.log(special);
+           return <SpecialButton key={index} special = {special} value={special.value} negative={props.negative} handleClick={props.handleClick} handleClear={props.handleClear} percent={props.percent}/>
          })
         
        }

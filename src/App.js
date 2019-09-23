@@ -23,36 +23,70 @@ function App() {
   
 
   const [dispNum, setDispNum] = useState('');
-  const [total, setTotal] = useState('');
+  
   
   function handleNumClick(e) {
     let value=e.target.value;
-    let firstNum = setDispNum(dispNum + value);
-    // return firstNum;
+    setDispNum(`${dispNum}${value}`);
+    console.log(typeof dispNum);
+    // console.log(typeof value)
+
     
   }
 
-//   function handleClick(e) {
-  //   if (firstNum) {
-  //     let value=e.target.value;
-  //     let secondNum = setDispNum(dispNum + value);
-  //     return secondNum;
-  // }
-// }
   function handleClick(e) {
     let value2=e.target.value;
     setDispNum(dispNum + value2);
-    
   }
+
   function handleEqual(e) {
-    console.log('You clicked equal');
+    let valueOp = e.target.value;
     setDispNum(eval(dispNum));
-    // setDispNum(eval(dispNum));
+    console.log();
+
   }
-  function handleClear(e) {
-    console.log('you have clicked clear');
+
+  function handleClear() {
     setDispNum("");
   }
+
+  function percent(e) {
+    let value=e.target.value;
+    setDispNum(`${eval(dispNum + value)}`);
+    // setDispNum(Number.parseFloat)
+  }
+
+  function negative(e) {
+    let value=e.target.value;
+    let neg = `${eval(dispNum + value)}`;
+    setDispNum(neg);
+  }
+  
+
+  //This works, but is vulnerable
+  // function handleNumClick(e) {
+  //   let value=e.target.value;
+  //   setDispNum(dispNum + value);
+  // }
+
+  // function handleClick(e) {
+  //   let value2=e.target.value;
+  //   setDispNum(dispNum + value2);
+  // }
+
+  // function handleEqual(e) {
+  //   setDispNum(eval(dispNum));
+  // }
+
+  // function handleClear() {
+  //   setDispNum("");
+  // }
+
+  // function percent(e) {
+  //   let value=e.target.value;
+  //   setDispNum(`${eval(dispNum + value)}`);
+  // }
+
   return (
     
     <div className="container">
@@ -62,18 +96,17 @@ function App() {
         <Display dispNum={dispNum}/>
         <div className="button-container">
           <div className="row-buttons">
-            <Specials handleClick={handleClick} handleClear={handleClear}/>
+            <Specials handleClick={handleClick} handleClear={handleClear} percent={percent} negative={negative}/>
             <Numbers handleClick={handleNumClick}/>
           </div>
           <div className="column-buttons">
             <Operators handleClick={handleClick} handleEqual={handleEqual}/>
           </div>
         </div>
-        
-        
       </div>
     </div>
   );
+
 }
 
 export default App;
