@@ -1,4 +1,6 @@
-
+html {
+    
+}
 .container {
     background-color: #c00025;
     width: 100%;
@@ -21,6 +23,7 @@
     align-items: flex-end;
     padding-right: 8%;
     font-size: 5.0rem;
+    max-width: 90%;
   }
   
 .logo-container {
@@ -33,11 +36,16 @@
 }
 
 .buttons {
+    
+    
     border: none;
     color: white;
+    /* remove below to get button text back*/
+    
+
     background: darkblue;
-    width: 4.5rem;
-    height: 4.5rem;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
     font-size: 3rem;
     margin: 2%;
@@ -53,7 +61,7 @@
 }
 
 .button-container {
-    max-width: 550px;
+    max-width: 500px;
     max-height: 500px;
     height: 100%;
     display: flex;
@@ -62,23 +70,33 @@
 
 .row-buttons {
     width: 75%;
+    height: 500px;
+    max-height: 100%;
+    display: flex;
+    justify-content: space-around;
     flex-flow: row wrap;
     max-width: 100%;
-    max-height: 100%
+    
 }
 
 .column-buttons {
     width: 25%;
+    height: 500px;
+    max-width: 100%;
+    max-height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .spec-container {
+    width: 100%;
+    max-height: 25%;
     display: flex;
     justify-content: space-between;
 }
 
 .num-container {
+    max-height: 375px;
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
@@ -89,6 +107,7 @@
     flex-flow: column nowrap;
     justify-content: space-around;
     min-height: 100%;
+    max-height: 100%;
 }
 
 .zero {

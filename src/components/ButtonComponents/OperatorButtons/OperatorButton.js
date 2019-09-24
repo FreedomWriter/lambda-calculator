@@ -1,7 +1,7 @@
 import React from "react";
-// import Display from "../../../components/DisplayComponents/Display";
+
 const OperatorButton = (props) => {
-  // console.log(props);
+  
   if (props.char === "=") {
     return (<button className="equal operator-buttons buttons" value={props.char} onClick={props.handleEqual}>{props.char}</button>);
   } else 

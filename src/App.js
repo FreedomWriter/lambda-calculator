@@ -24,6 +24,10 @@ function App() {
 
   const [dispNum, setDispNum] = useState('0');
   
+  function handleClick(e) {
+    let value=e.target.value;
+    setDispNum(dispNum + value);
+  }
   
   function handleNumClick(e) {
     let value=e.target.value;
@@ -32,11 +36,6 @@ function App() {
     } else 
     setDispNum(`${dispNum}${value}`);
     
-  }
-
-  function handleClick(e) {
-    let value=e.target.value;
-    setDispNum(dispNum + value);
   }
 
   function handleEqual(e) {
@@ -59,45 +58,6 @@ function App() {
     setDispNum(neg);
   }
   
-
-  //This works, but is vulnerable
-  // function handleNumClick(e) {
-  //   let value=e.target.value;
-  //   setDispNum(`${dispNum}${value}`);
-  //   console.log(typeof dispNum);
-  //   // console.log(typeof value)
-
-    
-  // }
-
-  // function handleClick(e) {
-  //   let value2=e.target.value;
-  //   setDispNum(dispNum + value2);
-  // }
-
-  // function handleEqual(e) {
-  //   let valueOp = e.target.value;
-  //   setDispNum(eval(dispNum));
-  //   console.log();
-
-  // }
-
-  // function handleClear() {
-  //   setDispNum("");
-  // }
-
-  // function percent(e) {
-  //   let value=e.target.value;
-  //   setDispNum(`${eval(dispNum + value)}`);
-  //   // setDispNum(Number.parseFloat)
-  // }
-
-  // function negative(e) {
-  //   let value=e.target.value;
-  //   let neg = `${eval(dispNum + value)}`;
-  //   setDispNum(neg);
-  // }
-
   return (
     
     <div className="container">

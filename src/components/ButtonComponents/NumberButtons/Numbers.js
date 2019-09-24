@@ -8,39 +8,25 @@ import { numbers } from "../../../data";
 import { numbers } from '../../../data' 
 */
 //Import your array data to from the provided data file
-const Numbers = (props) => {
+const Numbers = ({handleClick}) => {
   // STEP 2 - add the imported data to state
-  // const [numsData, setNumsData] = useState('');
-  // console.log(props);
+  const [numsData, setNumsData] = useState(numbers);
+  
   return (
     <div className="num-container">
       {/* STEP 3 - Use .map() to iterate over your array data and return a button
        component matching the name on the provided file. Pass
        it any props needed by the child component*/}
        {
-         numbers.map((num, index) => {
+         numsData.map((num, index) => {
           if (num === ".") {
-            return <NumberButton key={index} number={num} handleNumClick={props.handleClick} state={useState} />
+            return <NumberButton key={index} number={num} handleNumClick={handleClick} state={useState} />
          } else 
-          return <NumberButton key={index} number={parseInt(num)} handleNumClick={props.handleClick} state={useState} />
+          return <NumberButton key={index} number={parseInt(num)} handleNumClick={handleClick} state={useState} />
          })
-       }
-       
-       {//Below works, with eval
-         /* {
-         numbers.map((num, index) => {
-          if (num === ".") {
-            return <NumberButton key={index} number={num} handleNumClick={props.handleClick} state={useState} />
-         } else 
-          return <NumberButton key={index} number={parseInt(num)} handleNumClick={props.handleClick} state={useState} />
-         })
-       } */}
-
-       
-       
+       } 
     </div>
   );
-
 };
 
 export default Numbers;
