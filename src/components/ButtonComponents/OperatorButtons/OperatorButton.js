@@ -1,14 +1,14 @@
 import React from "react";
 
-const OperatorButton = (props) => {
+const OperatorButton = ( {char, handleEqual, value, handleClick}) => {
   
-  if (props.char === "=") {
-    return (<button className="equal operator-buttons buttons" value={props.char} onClick={props.handleEqual}>{props.char}</button>);
+  if (char === "=") {
+    return (<button className="equal operator-buttons buttons" value={char} onClick={handleEqual}>{char}</button>);
   } else 
   return (
     <>
       {/* Display a button element rendering the data being passed down from the parent container on props */}
-      <button className="operator-buttons buttons" value={props.value} onClick={props.handleClick}>{props.char}</button>
+      <button className="operator-buttons buttons" value={value} onClick={handleClick}>{char}</button>
     </>
   );
 };
