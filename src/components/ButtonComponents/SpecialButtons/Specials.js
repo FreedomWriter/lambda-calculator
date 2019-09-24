@@ -3,7 +3,7 @@ import React, {useState} from "react";
 import SpecialButton from "./SpecialButton";
 import {specials} from "../../../data";
 //import any components needed
-console.log('helloworld')
+
 //Import your array data to from the provided data file
 
 const Specials = ({negative, handleClear, handleClick, percent}) => {
