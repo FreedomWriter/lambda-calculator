@@ -47,6 +47,13 @@ html {
   box-shadow: 1px 5px 5px darkslategrey;
 }
 
+@media (min-width: 500px) {
+  .buttons {
+    width: 3.25rem;
+    height: 3.25rem;
+  }
+}
+
 .operator-buttons {
   background: #3f3fbf;
 }
