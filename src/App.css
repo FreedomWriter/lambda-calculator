@@ -36,6 +36,8 @@ html {
 .buttons {
   border: none;
   color: white;
+  /* remove below to get button text back*/
+
   background: darkblue;
   width: 5rem;
   height: 5rem;
@@ -43,42 +45,6 @@ html {
   font-size: 3rem;
   margin: 2%;
   box-shadow: 1px 5px 5px darkslategrey;
-}
-
-@media (max-width: 400px) {
-  .buttons {
-    width: 3.5rem;
-    height: 3.5rem;
-    font-size: 2rem;
-    margin: 0;
-  }
-  .row-buttons {
-    border: 1px solid white;
-  }
-  .column-buttons {
-    border: 2px solid purple;
-    /* height: 200px; */
-  }
-  .spec-container {
-    border: 1px solid white;
-    max-height: 15px;
-  }
-  .op-container {
-    border: 1px solid white;
-    /* height: 100px; */
-  }
-  .button-container {
-    border: 1px solid yellow;
-    max-height: 100px;
-    margin: 0;
-  }
-  /* .num-container { */
-  /* border: 1px solid white;
-    max-height: 100%;
-  } */
-  /* .container {
-    max-height: 600px;
-  } */
 }
 
 .operator-buttons {
