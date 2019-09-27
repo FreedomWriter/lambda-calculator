@@ -48,7 +48,7 @@ function App() {
   }
 
   function percent(e) {
-    let value=e.target.value;
+    let {value}=e.target;
     setDispNum(`${eval(dispNum + value)}`);
   }
 
