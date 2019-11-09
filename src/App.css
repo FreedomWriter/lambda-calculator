@@ -122,6 +122,7 @@ html {
     border-radius: 50%;
     font-size: 2rem;
     box-shadow: 1px 5px 5px darkslategrey;
+    text-align: center;
   }
 }
 
