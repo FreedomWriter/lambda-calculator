@@ -47,6 +47,7 @@ html {
   font-size: 3rem;
   margin: 2%;
   box-shadow: 1px 5px 5px darkslategrey;
+  text-align: center;
 }
 
 .operator-buttons {
@@ -116,7 +117,6 @@ html {
     border: none;
     color: white;
     /* remove below to get button text back*/
-
     background: darkblue;
     width: 4rem;
     border-radius: 50%;
